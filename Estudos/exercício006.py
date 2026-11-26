@@ -1,0 +1,16 @@
+#valor1 = input('Digite o primeiro número: ')
+#valor2 = input('Digite o segundo número: ')
+#print(valor1.isnumeric())
+#print(valor2.isnumeric())
+#resultado = valor1 + valor2
+#print("A soma de {} e {} é igual a {}".format(valor1, valor2, resultado))
+
+valor = input('Digita qualquer coisa: ')
+print('O tipo primitivo desse valor é? R: ', type(valor))
+print('Só tem espaços? R: ', valor.isspace())
+print('É um número? ', valor.isnumeric())
+print('É um alfabético? ', valor.isalpha())
+print('É um alfanumérico?', valor.isalnum())
+print('Está em letras maísculas? ', valor.isupper())
+print('Está em letras minúsculas? ', valor.islower())
+print('É capitalizada?', valor.istitle())

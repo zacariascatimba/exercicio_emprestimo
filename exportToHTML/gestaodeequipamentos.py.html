@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>gestaodeequipamentos.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+gestaodeequipamentos.py</font>
+</center></td></tr></table>
+<pre><span class="s0"># LISTA DOS EQUPAMENTOS E OS ESTADOS DOS MESMOS</span>
+<span class="s2">from </span><span class="s1">datetime </span><span class="s2">import </span><span class="s1">date</span>
+
+<span class="s1">data </span><span class="s3">= </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">11</span><span class="s3">, </span><span class="s4">10</span><span class="s3">)</span>
+
+<span class="s1">colaboradores </span><span class="s3">= [</span><span class="s5">&quot;Ana Costa&quot;</span><span class="s3">, </span><span class="s5">&quot;Carlos Mendes&quot;</span><span class="s3">, </span><span class="s5">&quot;Joana Lopes&quot;</span><span class="s3">]</span>
+
+<span class="s1">equipamentos </span><span class="s3">= [{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E001&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;nome&quot;</span><span class="s3">: </span><span class="s5">&quot;Portatil Dell Latitude&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;tipo&quot;</span><span class="s3">: </span><span class="s5">&quot;Portatil&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;estado&quot;</span><span class="s3">: </span><span class="s5">&quot;Emprestado&quot;</span><span class="s3">},</span>
+                <span class="s3">{ </span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E002&quot;</span><span class="s3">,</span>
+                  <span class="s5">&quot;nome&quot;</span><span class="s3">: </span><span class="s5">&quot;Projector Epson&quot;</span><span class="s3">,</span>
+                  <span class="s5">&quot;tipo&quot;</span><span class="s3">: </span><span class="s5">&quot;Projector&quot;</span><span class="s3">,</span>
+                  <span class="s5">&quot;estado&quot;</span><span class="s3">: </span><span class="s5">&quot;Emprestado&quot;</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E003&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;nome&quot;</span><span class="s3">: </span><span class="s5">&quot;Portatil ProBook&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;tipo&quot;</span><span class="s3">: </span><span class="s5">&quot;Projector&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;estado&quot;</span><span class="s3">: </span><span class="s5">&quot;Disponível&quot;</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E004&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;nome&quot;</span><span class="s3">: </span><span class="s5">&quot;Monitor Samsung 24&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;tipo&quot;</span><span class="s3">: </span><span class="s5">&quot;Monitor&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;estado&quot;</span><span class="s3">: </span><span class="s5">&quot;Em reparação&quot;</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E005&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;nome&quot;</span><span class="s3">: </span><span class="s5">&quot;Portatil Lenovo&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;tipo&quot;</span><span class="s3">: </span><span class="s5">&quot;Monitor&quot;</span><span class="s3">,</span>
+                 <span class="s5">&quot;estado&quot;</span><span class="s3">: </span><span class="s5">&quot;Disponível&quot;</span><span class="s3">}</span>
+                <span class="s3">]</span>
+
+<span class="s1">emprestimos </span><span class="s3">= [{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E003&quot;</span><span class="s3">,</span>
+                <span class="s5">&quot;colaborador&quot;</span><span class="s3">: </span><span class="s5">&quot;Ana Costa&quot;</span><span class="s3">,</span>
+                <span class="s5">&quot;saida&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">10</span><span class="s3">, </span><span class="s4">20</span><span class="s3">),</span>
+                <span class="s5">&quot;devevoltar&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">10</span><span class="s3">, </span><span class="s4">25</span><span class="s3">),</span>
+                <span class="s5">&quot;voltou&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">10</span><span class="s3">, </span><span class="s4">24</span><span class="s3">)},</span>
+               <span class="s3">{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E001&quot;</span><span class="s3">,</span>
+                <span class="s5">&quot;colaborador&quot;</span><span class="s3">: </span><span class="s5">&quot;Ana Costa&quot;</span><span class="s3">,</span>
+                <span class="s5">&quot;saida&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">11</span><span class="s3">, </span><span class="s4">1</span><span class="s3">),</span>
+                <span class="s5">&quot;devevoltar&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">11</span><span class="s3">, </span><span class="s4">5</span><span class="s3">),</span>
+                <span class="s5">&quot;voltou&quot;</span><span class="s3">: </span><span class="s5">&quot;Ainda não voltou&quot;</span><span class="s3">},</span>
+               <span class="s3">{</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s5">&quot;E002&quot;</span><span class="s3">,</span>
+                <span class="s5">&quot;colaborador&quot;</span><span class="s3">: </span><span class="s5">&quot;Carlos Mendes&quot;</span><span class="s3">,</span>
+                <span class="s5">&quot;saida&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">11</span><span class="s3">, </span><span class="s4">8</span><span class="s3">),</span>
+                <span class="s5">&quot;devevoltar&quot;</span><span class="s3">: </span><span class="s1">date</span><span class="s3">(</span><span class="s4">2026</span><span class="s3">, </span><span class="s4">11</span><span class="s3">, </span><span class="s4">12</span><span class="s3">),</span>
+                <span class="s5">&quot;voltou&quot;</span><span class="s3">: </span><span class="s5">&quot;Ainda não voltou&quot;</span><span class="s3">}</span>
+               <span class="s3">]</span>
+
+
+
+<span class="s1">menu </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s5">&quot;MENU&quot;</span>
+             <span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">1 - VER OS EQUIPAMENTOS E OS ESTADOS&quot;</span>
+             <span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">2 - EMPRESTAR UM EQUIPAMENTO&quot;</span>
+             <span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">3 - REGISTAR UMA DEVOLUÇÃO&quot;</span>
+             <span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">4 - VER EMPRÉSTIMOS EM ATRASO&quot;</span>
+             <span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">5 - VER QUANTIDADE DE EMPRÉSTIMOS POR COLABORADOR&quot;</span>
+             <span class="s5">&quot;</span><span class="s2">\n\n</span><span class="s5">Por favor, digite a opção correta (1, 2, 3, 4 ou 5) ou digite 0 para encerrar: &quot;</span><span class="s3">)</span>
+
+<span class="s2">while </span><span class="s1">menu </span><span class="s3">!= </span><span class="s5">&quot;0&quot;</span><span class="s3">:</span>
+    <span class="s2">if </span><span class="s1">menu </span><span class="s3">== </span><span class="s5">&quot;1&quot;</span><span class="s3">:</span>
+        <span class="s2">for </span><span class="s1">equipamento </span><span class="s2">in </span><span class="s1">equipamentos</span><span class="s3">:</span>
+            <span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;Os equipamentos disponíveis são:</span><span class="s2">\n</span><span class="s5">Nome: </span><span class="s2">{</span><span class="s1">equipamento</span><span class="s3">[</span><span class="s5">'nome'</span><span class="s3">]</span><span class="s2">}\n</span><span class="s5">Estado: </span><span class="s2">{</span><span class="s1">equipamento</span><span class="s3">[</span><span class="s5">'estado'</span><span class="s3">]</span><span class="s2">}</span><span class="s5">&quot;</span><span class="s3">)</span>
+        <span class="s1">seguir </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">Deseja ver mais alguma coisa? Se sim, escolha novamente a opção ou digite 0 para encerrar!&quot;</span><span class="s3">).</span><span class="s1">upper</span><span class="s3">()</span>
+        <span class="s2">if </span><span class="s1">seguir </span><span class="s3">== </span><span class="s5">&quot;0&quot;</span><span class="s3">:</span>
+            <span class="s2">break</span>
+        <span class="s2">elif </span><span class="s1">seguir </span><span class="s3">== </span><span class="s5">&quot;SIM&quot; </span><span class="s2">or </span><span class="s1">seguir </span><span class="s3">== </span><span class="s5">&quot;S&quot;</span><span class="s3">:</span>
+            <span class="s1">menu</span>
+        <span class="s2">elif </span><span class="s1">seguir </span><span class="s3">!= </span><span class="s5">&quot;SIM&quot; </span><span class="s2">and </span><span class="s1">seguir </span><span class="s3">!= </span><span class="s5">&quot;S&quot; </span><span class="s2">and </span><span class="s1">seguir </span><span class="s3">!= </span><span class="s5">&quot;0&quot;</span><span class="s3">:</span>
+            <span class="s1">opcao </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s5">&quot;Digite a opção correta!&quot;</span><span class="s3">)</span>
+    <span class="s2">elif </span><span class="s1">menu </span><span class="s3">== </span><span class="s5">&quot;2&quot;</span><span class="s3">:</span>
+        <span class="s2">for </span><span class="s1">emprestimo </span><span class="s2">in </span><span class="s1">equipamentos</span><span class="s3">:</span>
+            <span class="s2">if </span><span class="s1">emprestimo</span><span class="s3">[</span><span class="s5">&quot;estado&quot;</span><span class="s3">] == </span><span class="s5">&quot;Disponível&quot;</span><span class="s3">:</span>
+                <span class="s1">idequipamento </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s5">&quot;Por favor, digite o ID do equipamento: &quot;</span><span class="s3">)</span>
+                <span class="s1">nomecolaborador </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s5">&quot;Por favor, digite o nome do funcionário que iráreceber o equipamento: &quot;</span><span class="s3">)</span>
+<span class="s0">#               datasaida = input(&quot;Insira a data&quot;date)</span>
+            <span class="s1">emprestimos</span><span class="s3">.</span><span class="s1">append</span><span class="s3">({</span><span class="s5">&quot;id&quot;</span><span class="s3">: </span><span class="s1">emprestimo</span><span class="s3">[</span><span class="s5">&quot;id&quot;</span><span class="s3">],})</span>
+
+    <span class="s2">elif </span><span class="s1">menu </span><span class="s3">== </span><span class="s5">&quot;3&quot;</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;&quot;</span><span class="s3">)</span>
+
+    <span class="s2">elif </span><span class="s1">menu </span><span class="s3">== </span><span class="s5">&quot;4&quot;</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;&quot;</span><span class="s3">)</span>
+
+    <span class="s2">elif </span><span class="s1">menu </span><span class="s3">== </span><span class="s5">&quot;5&quot;</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;&quot;</span><span class="s3">)</span>
+
+    <span class="s2">elif </span><span class="s1">menu </span><span class="s3">== </span><span class="s5">&quot;0&quot;</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;Programa encerrado&quot;</span><span class="s3">)</span>
+        <span class="s2">break</span>
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
